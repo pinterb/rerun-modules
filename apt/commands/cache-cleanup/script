@@ -60,7 +60,9 @@ rerun_options_parse "$@"
 # ----------------------
 
 # - - -
-# Put the command implementation here.
+echo 'Cleaning package cache...'
+echo 'Requires root privileges:'
+sudo apt-get clean
 # - - -
 
 # Done. Exit with last command exit status.

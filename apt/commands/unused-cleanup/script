@@ -60,7 +60,10 @@ rerun_options_parse "$@"
 # ----------------------
 
 # - - -
-# Put the command implementation here.
+echo 'Removing selected pre-installed applications...'
+echo 'Requires root privileges:'
+sudo apt-get purge 
+echo 'Done.'
 # - - -
 
 # Done. Exit with last command exit status.

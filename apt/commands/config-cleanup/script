@@ -60,7 +60,9 @@ rerun_options_parse "$@"
 # ----------------------
 
 # - - -
-# Put the command implementation here.
+echo 'Removing leftover configuration files...'
+echo 'Requires root privileges:'
+sudo dpkg --purge $(COLUMNS=200 dpkg -l | grep '^rc' | tr -s ' ' | cut -d ' ' -f 2)
 # - - -
 
 # Done. Exit with last command exit status.

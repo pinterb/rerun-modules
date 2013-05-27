@@ -60,7 +60,55 @@ rerun_options_parse "$@"
 # ----------------------
 
 # - - -
-# Put the command implementation here.
+
+# Base Packages 
+PACKAGES=(aptitude synaptic wget curl rsync openssh-client vim python python-pip python-paramiko ruby rubygems pandoc pidgin)
+
+# STATUS OF BASE PACKAGES 
+function statuslist {
+
+    echo
+    echo "Status of base packages..."
+    echo "Requires root privileges:"
+    echo
+
+    for i in ${PACKAGES[@]}; do
+	sudo apt-cache policy ${i} 
+    done
+
+    echo
+    echo "Package status listing completed."
+}
+
+
+# INSTALL BASE PACKAGES 
+function packages {
+
+    echo
+    echo "Installing base packages..."
+    echo "Requires root privileges:"
+    echo
+
+    for i in ${PACKAGES[@]}; do
+        sudo apt-get install -y --no-install-recommends ${i}
+    done
+
+    echo
+    echo "Base package installation completed."
+}
+
+
+# MAIN 
+function main {
+    if $STATUS ; then
+        statuslist 
+    else
+        packages    
+    fi
+}
+
+main
+
 # - - -
 
 # Done. Exit with last command exit status.
