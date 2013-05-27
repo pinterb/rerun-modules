@@ -1,4 +1,4 @@
 rerun-modules
 =============
 
-Rerun modules for configuring an Ubuntu desktop system.
+Some [Rerun](http://rerun.github.io/rerun/) modules for configuring an Ubuntu desktop system.
