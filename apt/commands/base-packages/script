@@ -62,7 +62,7 @@ rerun_options_parse "$@"
 # - - -
 
 # Base Packages 
-PACKAGES=(aptitude synaptic wget curl rsync openssh-client vim python python-pip python-paramiko ruby rubygems pandoc pidgin tree s3cmd)
+PACKAGES=(aptitude synaptic wget curl rsync openssh-client vim python python-pip python-paramiko ruby rubygems pandoc pidgin tree s3cmd jedit subversion)
 
 # STATUS OF BASE PACKAGES 
 function statuslist {
